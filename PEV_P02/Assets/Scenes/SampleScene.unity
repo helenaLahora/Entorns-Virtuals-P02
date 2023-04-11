@@ -318,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242390353}
   m_Layer: 0
-  m_Name: InstantiatorAreas
+  m_Name: InstantatiorAreas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428958556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34, y: 33.3, z: -169}
+  m_LocalPosition: {x: -180, y: 33.3, z: -161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -487,8 +487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 3888768472424928286, guid: 7bebe8ad7024eb545aa9e87261f30718, type: 3}
-  instantiationAreaSize: {x: 100, y: 200}
-  numberOfInstances: 8
+  instantiationAreaSize: {x: 300, y: 300}
+  numberOfInstances: 4
   height: 0
   minScale: 4
   maxScale: 10
@@ -576,6 +576,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439228145}
   m_Mesh: {fileID: 6448780513759564441, guid: c39315df5a839734f94be03709efc30b, type: 3}
+--- !u!1 &528424501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528424502}
+  - component: {fileID: 528424503}
+  m_Layer: 0
+  m_Name: InstantatiorPattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528424502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528424501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -65, y: 14.9, z: -13.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528424503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528424501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934543d800e96f1408528e3656dee9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 7348888862452166157, guid: 95c1840c9f8304547864518f7a1b262b, type: 3}
+  numberOfObjects: 10
+  radius: 40
+  speed: 20
+  height: 0.2
+  scale: 10
 --- !u!1 &570158071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 2957205992269945826, guid: c03da58a22269eb4eb5dd195f8d140ec, type: 3}
   instantiationAreaSize: {x: 200, y: 200}
-  numberOfInstances: 100
+  numberOfInstances: 60
   height: 0
   minScale: 10
   maxScale: 30
@@ -1399,7 +1449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 2957205992269945826, guid: c03da58a22269eb4eb5dd195f8d140ec, type: 3}
   instantiationAreaSize: {x: 200, y: 200}
-  numberOfInstances: 100
+  numberOfInstances: 60
   height: 0
   minScale: 10
   maxScale: 30
@@ -1886,7 +1936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 2957205992269945826, guid: c03da58a22269eb4eb5dd195f8d140ec, type: 3}
   instantiationAreaSize: {x: 200, y: 200}
-  numberOfInstances: 100
+  numberOfInstances: 60
   height: 0
   minScale: 10
   maxScale: 30
@@ -2005,7 +2055,7 @@ Transform:
   - {fileID: 705507995}
   - {fileID: 543450652229621565}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236583940
 GameObject:
@@ -2089,7 +2139,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1319642833
 GameObject:
@@ -2322,7 +2372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 2957205992269945826, guid: c03da58a22269eb4eb5dd195f8d140ec, type: 3}
   instantiationAreaSize: {x: 200, y: 200}
-  numberOfInstances: 100
+  numberOfInstances: 60
   height: 0
   minScale: 10
   maxScale: 30

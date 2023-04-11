@@ -43,13 +43,13 @@ public class ObjectInstantiator : MonoBehaviour
             Vector3 scale = new Vector3(randomScale, randomScale, randomScale);
 
             // Se genera una rotación aleatoria en el eje "y"
-            Quaternion rotation = Quaternion.Euler(0f, Random.Range(0f, maxRotationY), 0f);
+            Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0f, maxRotationY), 0f);
 
             // Se instancia el objeto en la posición aleatoria y con la escala y rotación generadas
-            GameObject newInstance = Instantiate(objectToInstantiate, randomPosition, rotation);
+            GameObject newInstance = Instantiate(objectToInstantiate, randomPosition, randomRotation);
             newInstance.transform.localScale = scale;
 
-            // Se establece el objeto instanciado como hijo del objeto con el script
+            // Se establece el objeto instanciado como hijo del objeto
             newInstance.transform.parent = transform;
         }
     }
