@@ -14,7 +14,7 @@ public class ObjectInstantiator : MonoBehaviour
     // Tamaño del área de instanciación solo en los ejes x y z
     public Vector2 instantiationAreaSize;
 
-    [Range(1, 50)] // Rango permitido para el número de instancias a crear
+    [Range(1, 100)] // Rango permitido para el número de instancias a crear
     public int numberOfInstances = 15; // Número de instancias a crear
 
     [Range(0, 10)] // Altura a la que se generan los objetos
