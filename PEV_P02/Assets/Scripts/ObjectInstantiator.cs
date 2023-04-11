@@ -23,6 +23,9 @@ public class ObjectInstantiator : MonoBehaviour
     public float minScale = 0.5f; // Escala mínima permitida
     public float maxScale = 2f; // Escala máxima permitida
 
+    [Range(0, 360)] // Rango permitido para la rotación en el eje "y"
+    public float maxRotationY = 360f; // Valor máximo de rotación permitido en el eje "y"
+
     private void Start()
     {
         // Bucle para crear instancias
@@ -39,8 +42,11 @@ public class ObjectInstantiator : MonoBehaviour
             float randomScale = Random.Range(minScale, maxScale);
             Vector3 scale = new Vector3(randomScale, randomScale, randomScale);
 
-            // Se instancia el objeto en la posición aleatoria y con la escala generada
-            GameObject newInstance = Instantiate(objectToInstantiate, randomPosition, Quaternion.identity);
+            // Se genera una rotación aleatoria en el eje "y"
+            Quaternion rotation = Quaternion.Euler(0f, Random.Range(0f, maxRotationY), 0f);
+
+            // Se instancia el objeto en la posición aleatoria y con la escala y rotación generadas
+            GameObject newInstance = Instantiate(objectToInstantiate, randomPosition, rotation);
             newInstance.transform.localScale = scale;
 
             // Se establece el objeto instanciado como hijo del objeto con el script
