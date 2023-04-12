@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3503781115428067346}
   - component: {fileID: 5998617615418329583}
   - component: {fileID: 8515759722443700889}
+  - component: {fileID: 6250870036844711051}
   m_Layer: 0
   m_Name: SP_Plant07
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6250870036844711051
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312721813465786845}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2216403135039299858, guid: c39315df5a839734f94be03709efc30b, type: 3}
