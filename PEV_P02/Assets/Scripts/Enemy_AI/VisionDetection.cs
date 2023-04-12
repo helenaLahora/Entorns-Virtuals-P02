@@ -30,18 +30,18 @@ public class NewBehaviourScript : MonoBehaviour
             if (IsInFOV())
             {
                 Debug.Log("IN FOV");
-                  if (!IsBlocked())
-                 {
+                 // if (!IsBlocked())
+                 //{
 
-                 }
+                 //}
             }
         }
     }
 
-    private bool IsBlocked()
-    {
+    //private bool IsBlocked()
+    //{
 
-    }
+    //}
 
     private bool IsInFOV()
     {
