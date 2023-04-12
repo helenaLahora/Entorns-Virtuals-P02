@@ -35,15 +35,6 @@ public class InputSystem : MonoBehaviour
         Controles_V = CONTROLES.Get<Vector2>().y; 
     }
 
-    private void OnRun()
-    {
-        Controles_R = true;
-    }
-
-    private void OnStopRun()
-    {
-        Controles_R = false;
-    }
 
     private void OnJump() //OnJUMP --> Té aquest nom perquè és el que li he posat jo als comandaments de salt en el InputSystem de Unity
                             // Com que només te les directrius de una tecla, no és necessari posar input perquè ja sap quin agafar

@@ -9,7 +9,7 @@ public class Salto : MonoBehaviour
     // ES CREEN TOTS ELS VALORS NECESSARIS PER A QUE APAREGUIN EN PANTALLA I ES PUGUIN MODIFICAR
     [Header("Jump Parameters")]
     [SerializeField]
-    private float JumpHeight = 3;
+    private float JumpHeight = 15;
 
     [SerializeField]
     private float JumpTime = 0.4f;
@@ -49,7 +49,7 @@ public class Salto : MonoBehaviour
 
 
 
-    private float _gravityScale=1;
+    private float _gravityScale=5f;
 
     private float _lastVelocitys;
 

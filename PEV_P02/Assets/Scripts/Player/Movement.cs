@@ -11,10 +11,7 @@ public class Movement : MonoBehaviour
 
     [Header("Velocitats")]
     [SerializeField]
-    float WalkingSpeed = 4.5f;
-
-    [SerializeField]
-    float RunSpeed = 6f;
+    float WalkingSpeed = 8f;
 
     [SerializeField]
     float RotaionSpeed = 720f;
@@ -49,8 +46,6 @@ public class Movement : MonoBehaviour
 
     private Vector3 velocity = new Vector3(0, 0, 0); // Es crea el valor nou "velocity" que serà un Vector3
 
-    float Speed = 0;
-
 
 
 
@@ -82,14 +77,11 @@ public class Movement : MonoBehaviour
 
     public void Move(float horizontal, float vertical) // Agafem 
     {
-        Speed = Run() ? RunSpeed : WalkingSpeed; // La velocitat és o walking speed o running speed segons si pitgem la tecla shift o no
+        Vector3 OGmove = new Vector3(WalkingSpeed * horizontal, 0, WalkingSpeed * vertical); // Crees un Vector3 que ajunta tots els valors float en una sola variable
 
 
-        Vector3 OGmove = new Vector3(Speed * horizontal, 0, Speed * vertical); // Crees un Vector3 que ajunta tots els valors float en una sola variable
-
-
-        float targetVelocity_x = OGmove.x * Speed; // El que fa es crear una acceleració (que desprès fem servir pel smoothing)
-        float targetVelocity_z = OGmove.z * Speed;
+        float targetVelocity_x = OGmove.x * WalkingSpeed; // El que fa es crear una acceleració (que desprès fem servir pel smoothing)
+        float targetVelocity_z = OGmove.z * WalkingSpeed;
 
         float smoothing = _charactercontroler.isGrounded ? smoothing_Ground : smoothing_Air; // Quan el personatge ESTÀ tocant el terra, s'assigna el smoothing de ground
                                                                                              // Quan el personatge NO ESTÀ tocant el terra, s'assigna el smoothing del aire
@@ -121,16 +113,6 @@ public class Movement : MonoBehaviour
         // _playAnimation.setanimationmove(_jumpspeed);
     }
 
-
-    //_________________________________________________________________________________________________________________________________________________________________________________________//
-
-
-    //VOID PER PODER CORRER
-    public bool Run()
-    {
-        return input.Controles_R; // S'ha apretat la tecla shift? Doncs llavors correrà
-                                  // Control adquirit del SCRIPT InputSystem
-    }
 
 
 }
