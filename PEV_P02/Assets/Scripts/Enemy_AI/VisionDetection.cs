@@ -26,15 +26,21 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (IsInRange())
         {
-            Debug.Log("Detected");
+            Debug.Log("Detected Range");
             if (IsInFOV())
             {
-              //  if (!IsBlocked())
-               // {
+                Debug.Log("IN FOV");
+                  if (!IsBlocked())
+                 {
 
-               // }
+                 }
             }
         }
+    }
+
+    private bool IsBlocked()
+    {
+
     }
 
     private bool IsInFOV()
