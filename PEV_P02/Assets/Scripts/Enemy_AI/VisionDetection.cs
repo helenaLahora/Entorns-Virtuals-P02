@@ -6,9 +6,16 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
     [SerializeField]
-    Transform _Players;
+    Transform _Player;
 
+    [SerializeField]
+    [Range(0,10)]
     float DetectionRage = 10;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, DetectionRage);
+    }
 
     // Update is called once per frame
     void Update()
@@ -16,18 +23,18 @@ public class NewBehaviourScript : MonoBehaviour
         if (IsInRange())
         {
             Debug.Log("Detected");
-            if (IsInFOV())
-            {
-                if (!IsBlocked())
-                {
+            //if (IsInFOV())
+            //{
+              //  if (!IsBlocked())
+               // {
 
-                }
-            }
+               // }
+          //  }
         }
     }
 
     private bool IsInRange()
     {
-        return Vector3.Distance(transform.position, _Players.position) < DetectionRage;
+        return Vector3.Distance(transform.position, _Player.position) < DetectionRage;
     }
 }
