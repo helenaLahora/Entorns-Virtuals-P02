@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2299118466770556986}
   - component: {fileID: 1469081178887450325}
   - component: {fileID: 2278934139637334384}
+  - component: {fileID: 7683105649169839797}
   m_Layer: 0
   m_Name: SP_Crystal01
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7683105649169839797
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252152373466559537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2816090401519138617, guid: c39315df5a839734f94be03709efc30b, type: 3}

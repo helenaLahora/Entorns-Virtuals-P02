@@ -472,6 +472,56 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8346689930144010462, guid: c39315df5a839734f94be03709efc30b, type: 3}
+--- !u!1 &423832107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423832108}
+  - component: {fileID: 423832109}
+  m_Layer: 0
+  m_Name: Instantatior_AnilloExterior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423832108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423832107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 261.2, y: -126.278206, z: -84.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1268435263}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &423832109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423832107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934543d800e96f1408528e3656dee9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 2876699289717518677, guid: 4cb671a3a52c09c40bac4346400fb1a0, type: 3}
+  numberOfObjects: 10
+  radius: 50
+  speed: -20
+  height: 0
+  scale: 10
 --- !u!1 &428958556
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +771,7 @@ GameObject:
   - component: {fileID: 528424502}
   - component: {fileID: 528424503}
   m_Layer: 0
-  m_Name: InstantatiorPattern
+  m_Name: Instantatior_AnilloInterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528424501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 235.737, y: -126.278206, z: -25.19511}
+  m_LocalPosition: {x: 261.2, y: -126.278206, z: -84.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -754,9 +804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934543d800e96f1408528e3656dee9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInstantiate: {fileID: 9160356687616652448, guid: 7d7205724fbe25347ac6ed563786476c, type: 3}
-  numberOfObjects: 10
-  radius: 40
+  objectToInstantiate: {fileID: 2876699289717518677, guid: 4cb671a3a52c09c40bac4346400fb1a0, type: 3}
+  numberOfObjects: 5
+  radius: 30
   speed: 20
   height: 0.2
   scale: 10
@@ -1324,7 +1374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756527748}
   m_LocalRotation: {x: -0, y: 0.9994098, z: -0, w: 0.03435283}
-  m_LocalPosition: {x: 14.74, y: 1.5668414, z: 0.829998}
+  m_LocalPosition: {x: 18.8, y: 1.5668414, z: -1.4}
   m_LocalScale: {x: 3.3688, y: 2.637568, z: 3.3688}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2184,7 +2234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001771638}
   m_LocalRotation: {x: -0, y: 0.99452335, z: -0, w: 0.10451461}
-  m_LocalPosition: {x: 4.12, y: 2.620281, z: -9.55}
+  m_LocalPosition: {x: 4.4, y: 2.620281, z: -14.9}
   m_LocalScale: {x: 3.3688, y: 1.7600632, z: 3.3688}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2541,6 +2591,7 @@ Transform:
   m_Children:
   - {fileID: 242390353}
   - {fileID: 528424502}
+  - {fileID: 423832108}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7846,7 +7897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4822202597925704045}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.75, y: 1.350281, z: -10.710001}
+  m_LocalPosition: {x: 16.9, y: 1.350281, z: -11.7}
   m_LocalScale: {x: 3.3688, y: 3.3688, z: 3.3688}
   m_ConstrainProportionsScale: 0
   m_Children: []
