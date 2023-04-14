@@ -26,7 +26,7 @@ public class LaserGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.L)) // getkey --> metralleta // getkeydown --> cada clic
+        if (Input.GetKey(KeyCode.F)) // getkey --> metralleta // getkeydown --> cada clic
         {
             TryShoot();
         }
