@@ -8,14 +8,14 @@ public class Waypoints : MonoBehaviour
     Transform[] _waypoints;
 
     private int _index;
-    private int _LastIndex = 0;
+    
 
     private Vector3 CurrentTargetPos => _waypoints[_index].position; //dona la posició segons la posició del index
 
     private float _minDistanceToTarget = 0.1f; //si el player va ràpid, la distànciia ha de ser més gran perquè sino se la passa (radi)
 
     [SerializeField]
-    float Speed = 3f;
+    float Speed = 50f;
 
 
     // Update is called once per frame
@@ -36,13 +36,15 @@ public class Waypoints : MonoBehaviour
 
     private void ChangeWaypoint()
     {
-        _index = UnityEngine.Random.Range(1, 8); //Per canviar el waypoint es canvia el index
+         int _LastIndex = UnityEngine.Random.Range(0, 7);
+
+         _index = UnityEngine.Random.Range(0, 7); //Per canviar el waypoint es canvia el index
 
         if (_LastIndex == _index) //Si el ultimo numero de waipoint es diferente al numero nuevo
         {
             while (_LastIndex == _index)
             {
-                _index = UnityEngine.Random.Range(1, 8);
+                _index = UnityEngine.Random.Range(0, 7);
             }
             _LastIndex = _index;
         }
