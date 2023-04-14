@@ -61,14 +61,16 @@ public class raycastLaser : MonoBehaviour
             {
                 // Aplicar la velocidad del proyectil al objeto alcanzado
                 hitRigidbody.velocity = shootPoint.forward * bulletSpeed; // Usar la variable de velocidad de la bala
-
-                // Comprobar si el objeto alcanzado es el bulletPrefab
-                if (hit.collider.gameObject == bulletPrefab)
-                {
-                    // Destruir el enemigo
-                    Destroy(hit.collider.gameObject);
-                }
+                // Destruir el enemigo
             }
+
+            // Comprobar si el objeto alcanzado es el bulletPrefab
+            if (hit.collider.gameObject.CompareTag("Enemy")) // Corregir la etiqueta del enemigo
+            {
+                // Destruir el enemigo
+                Destroy(hit.collider.gameObject);
+            }
+
         }
         else
         {
@@ -81,11 +83,13 @@ public class raycastLaser : MonoBehaviour
         {
             // Instanciar una nueva bala en el punto de origen del disparo
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
-            bullet.transform.SetParent(shootPoint);
             Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
 
             // Configurar la velocidad y dirección de la bala
-            bulletRigidbody.velocity = shootPoint.forward * bulletSpeed; // Usar la variable
+            bulletRigidbody.velocity = shootPoint.forward * bulletSpeed; // Usar la variable de velocidad de la bala
+
+            // Destruir la bala después de cierto tiempo si no colisiona con ningún objeto
+            Destroy(bullet, bulletLifetime); // Usar la variable
         }
     }
 }
