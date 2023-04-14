@@ -3360,7 +3360,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377485321}
-  - component: {fileID: 1377485322}
   m_Layer: 0
   m_Name: LaserGenerator
   m_TagString: Untagged
@@ -3383,20 +3382,6 @@ Transform:
   m_Father: {fileID: 2031872555}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1377485322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377485320}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffed55df25475b4f9a195a2ec1e9eb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 919132149155446097, guid: 199575d41a09333449303a5f00b84801, type: 3}
-  attackKey: 102
 --- !u!1 &1408110119
 GameObject:
   m_ObjectHideFlags: 0
