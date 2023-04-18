@@ -10,11 +10,12 @@ public class Lasse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TryKillMySelf();
         
     }
 
     void TryKillMySelf()
     {
-        OnTirarsePelPont.Invoke();
+        OnTirarsePelPont?.Invoke();//No es null el ?
     }
 }
