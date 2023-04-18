@@ -15,8 +15,11 @@ public class Judith : MonoBehaviour
         Lasse.OnTirarsePelPont -= TrucarAmbulancia;
     }
 
-    private void TrucarAmbulancia()
+    private void TrucarAmbulancia(bool isDead)
     {
-        Debug.Log("Tatü tata");
+        if (!isDead)
+            Debug.Log("Por fin");
+        else
+            Debug.Log("Tatü tata");
     }
 }

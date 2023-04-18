@@ -15,9 +15,12 @@ public class Julia : MonoBehaviour
         Lasse.OnTirarsePelPont -= TrucarPolicia;
     }
 
-    private void TrucarPolicia()
+    private void TrucarPolicia(bool isDead)
     {
-        Debug.Log("Li posarem una multa");
+        if(!isDead)
+            Debug.Log("Por fin");
+        else
+            Debug.Log("Li posarem una multa");
     }
 }
 
