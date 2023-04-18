@@ -80,6 +80,11 @@ public class Movement : MonoBehaviour
         Vector3 OGmove = new Vector3(WalkingSpeed * horizontal, 0, WalkingSpeed * vertical); // Crees un Vector3 que ajunta tots els valors float en una sola variable
 
 
+        //LENA
+        // Converteix la direcció OGmove de l'espai mundial a l'espai local del jugador
+        //OGmove = transform.TransformDirection(OGmove);
+
+
         float targetVelocity_x = OGmove.x * WalkingSpeed; // El que fa es crear una acceleració (que desprès fem servir pel smoothing)
         float targetVelocity_z = OGmove.z * WalkingSpeed;
 

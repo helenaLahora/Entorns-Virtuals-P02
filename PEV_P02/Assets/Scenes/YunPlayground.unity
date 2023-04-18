@@ -2358,7 +2358,6 @@ MonoBehaviour:
   lookAt: {fileID: 198123371}
   minDistance: 50
   maxDistance: 100
-  fixedY: 20
 --- !u!81 &987614948
 AudioListener:
   m_ObjectHideFlags: 0

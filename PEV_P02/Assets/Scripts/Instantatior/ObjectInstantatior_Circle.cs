@@ -45,30 +45,34 @@ public class ObjectInstantatior_Circle : MonoBehaviour
         }
     }
 
-    void Update(){
-    // Se rota el objeto que tiene el script
-    transform.Rotate(Vector3.up, speed * Time.deltaTime);
-
-    // Se recorre la lista de objetos instanciados
-    for (int i = 0; i < objects.Count; i++)
+    void Update()
     {
-        // Se calcula el ángulo en el que debe estar la instancia actual para seguir el patrón circular, tomando en cuenta la rotación del objeto que tiene el script
-        float angle = i * Mathf.PI * 2f / numberOfObjects + transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
+        // Se rota el objeto que tiene el script
+        transform.Rotate(Vector3.up, speed * Time.deltaTime);
 
-        // Se calcula la posición de la instancia en función del ángulo, el radio y la altura definidos
-        Vector3 pos = new Vector3(Mathf.Cos(angle), height, Mathf.Sin(angle)) * radius;
+        // Se recorre la lista de objetos instanciados
+        for (int i = 0; i < objects.Count; i++)
+        {
+            if (objects[i] != null) // Null check
+            {
+                // Se calcula el ángulo en el que debe estar la instancia actual para seguir el patrón circular, tomando en cuenta la rotación del objeto que tiene el script
+                float angle = i * Mathf.PI * 2f / numberOfObjects + transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
 
-        // Se actualiza la posición de la instancia
-        objects[i].transform.position = transform.position + pos;
+                // Se calcula la posición de la instancia en función del ángulo, el radio y la altura definidos
+                Vector3 pos = new Vector3(Mathf.Cos(angle), height, Mathf.Sin(angle)) * radius;
 
-        // Se calcula la dirección desde la instancia hacia el centro del círculo
-        Vector3 dirToCenter = Vector3.Normalize(transform.position - objects[i].transform.position);
+                // Se actualiza la posición de la instancia
+                objects[i].transform.position = transform.position + pos;
 
-        // Se rota la instancia para que mire hacia el centro del círculo
-        objects[i].transform.rotation = Quaternion.LookRotation(dirToCenter, Vector3.up);
+                // Se calcula la dirección desde la instancia hacia el centro del círculo
+                Vector3 dirToCenter = Vector3.Normalize(transform.position - objects[i].transform.position);
 
-        // Se establece el objeto principal como padre de la instancia
-        objects[i].transform.parent = transform;
+                // Se rota la instancia para que mire hacia el centro del círculo
+                objects[i].transform.rotation = Quaternion.LookRotation(dirToCenter, Vector3.up);
+
+                // Se establece el objeto principal como padre de la instancia
+                objects[i].transform.parent = transform;
+            }
+        }
     }
-}
 }
