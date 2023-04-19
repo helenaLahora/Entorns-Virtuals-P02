@@ -2481,7 +2481,7 @@ MonoBehaviour:
   Shootable:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 9027934060935771822, guid: 4f230ba6479d1aa4b8a34db633c8c16c, type: 3}
+  bulletPrefab: {fileID: 4369976821183814044, guid: 5a598ddf1b09c2e40bdd0823701e7ec0, type: 3}
   shootPoint: {fileID: 1377485321}
   laser: {fileID: 878980026}
   bulletSpeed: 100
