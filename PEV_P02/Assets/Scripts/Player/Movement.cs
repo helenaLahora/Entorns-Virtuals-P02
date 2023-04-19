@@ -97,7 +97,7 @@ public class Movement : MonoBehaviour
 
         if (velocity != Vector3.zero)
         {
-            _charactercontroler.Move(velocity * Time.deltaTime); // Time.deltaTime ---> Dona els valors de velocitat a velocity
+            _charactercontroler.Move(velocity * Time.fixedDeltaTime); // Time.deltaTime ---> Dona els valors de velocitat a velocity
         }
 
         if (OGmove != Vector3.zero) // per corretgir el bug Look rotation viewing is zero, si el vector és 0 no fa res
@@ -105,7 +105,7 @@ public class Movement : MonoBehaviour
             //Funció de rotació que agafa l'input del moviment. Funció moviment - rotació.
             Quaternion toRotation = Quaternion.LookRotation(OGmove);
             //la component transform del personatge, agafes la rotació del personatge i li apliques la variable rotation creada anteriorment
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotaionSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotaionSpeed * Time.fixedDeltaTime);
         }
 
         _lastVelocity_Y = velocity.y;
