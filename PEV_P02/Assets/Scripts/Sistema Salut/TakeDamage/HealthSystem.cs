@@ -8,4 +8,13 @@ public class HealthSystem : MonoBehaviour, IDamageTaker
     {
         Debug.Log("Took Damage" + amount);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var  health = collision.GetComponent<IDamageTaker>();
+        if (health != null)
+        {
+            health.TakeDamage(5);
+        }
+    }
 }

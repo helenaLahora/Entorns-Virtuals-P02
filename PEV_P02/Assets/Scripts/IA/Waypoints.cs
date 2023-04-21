@@ -1,61 +1,70 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoints : MonoBehaviour
+public class Patrolling : MonoBehaviour
 {
+
     [SerializeField]
     Transform[] _waypoints;
 
-    private int _index;
-    
 
-    private Vector3 CurrentTargetPos => _waypoints[_index].position; //dona la posició segons la posició del index
+    private float _minDistanceToTarget = 0.1f;
 
-    private float _minDistanceToTarget = 0.1f; //si el player va ràpid, la distànciia ha de ser més gran perquè sino se la passa (radi)
+
+    private float Speed = 10f;
 
     [SerializeField]
-    float Speed = 50f;
+    private int _index;
+    [SerializeField]
+    private int _Last1index;
+    [SerializeField]
+    private int _Last2index;
 
 
-    // Update is called once per frame
+    private Vector3 CurrentTargetPos => _waypoints[_index].position;
+
+
     void Update()
     {
-        if (ReachedWaypoint()) //comprovar si ha arribat al waypoint
+        if (ReachedWaypoint())
         {
             ChangeWaypoint();
         }
         Move();
     }
 
-    private void Move()
+    private bool ReachedWaypoint()
     {
-        transform.LookAt(CurrentTargetPos); //Ens movem en la direcció del target (posició del index), aixi només camina cap endevant
-        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        return Vector3.Distance(transform.position, CurrentTargetPos) //que nos de la distancia entre ("nuestra posicion", y "la posicion objetivo");
+            < _minDistanceToTarget;
     }
 
     private void ChangeWaypoint()
     {
-         int _LastIndex = UnityEngine.Random.Range(0, 7);
 
-         _index = UnityEngine.Random.Range(0, 7); //Per canviar el waypoint es canvia el index
+        _Last2index = _Last1index;
+        _Last1index = _index;
 
-        if (_LastIndex == _index) //Si el ultimo numero de waipoint es diferente al numero nuevo
+        _index = UnityEngine.Random.Range(0, _waypoints.Length);
+        //_index = _index % _waypoints.Length;
+
+        if (_index == _Last2index)
         {
-            while (_LastIndex == _index)
+            while (_index == _Last2index || _index == _Last1index)
             {
-                _index = UnityEngine.Random.Range(0, 7);
+                _index = UnityEngine.Random.Range(0, _waypoints.Length);
             }
-            _LastIndex = _index;
-        }
-        else
-        {
-            _LastIndex = _index;
         }
     }
 
-    private bool ReachedWaypoint()
+    private void Move()
     {
-        return Vector3.Distance(transform.position, CurrentTargetPos) < _minDistanceToTarget;
+
+        transform.LookAt(CurrentTargetPos); //esto es suficiente para que mire en la direccion que queremos que vaya
+        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+
     }
 }
+
