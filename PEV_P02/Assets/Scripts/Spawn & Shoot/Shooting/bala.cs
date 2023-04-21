@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class bala : MonoBehaviour
 {
-    public float BulletLife;
-    public float BulletDamage;
+    public float BulletLife; // Duración de vida de la bala
+    public float BulletDamage; //Daño de la bala
     void Start()
     {
         StartCoroutine(BulletLifeDuration());
