@@ -7083,18 +7083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18bad589a3b98a459d3ac3a91e08f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waypoints:
-  - {fileID: 963791700}
-  - {fileID: 566306960}
-  - {fileID: 1832653762}
-  - {fileID: 806891158}
-  - {fileID: 1825479865}
-  - {fileID: 1066301423}
-  - {fileID: 304736790}
-  - {fileID: 1298279698}
-  _index: 0
-  _minDistanceToTarget: 0.1
-  Speed: 50
 --- !u!54 &95471670960236269
 Rigidbody:
   m_ObjectHideFlags: 0
