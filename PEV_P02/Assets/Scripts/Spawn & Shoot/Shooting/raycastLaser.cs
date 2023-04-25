@@ -13,7 +13,10 @@ public class raycastLaser : MonoBehaviour
 
     public float bulletSpeed = 100f; // Velocidad de la bala
     public float bulletLifetime = 2f; // Tiempo de vida de la bala
-    public float bulletDamage = 2f; 
+    public float bulletDamage = 2f;
+
+    [SerializeField]
+    InputSystem input;
 
     void Start()
     {
@@ -37,7 +40,7 @@ public class raycastLaser : MonoBehaviour
         laser.SetPosition(1, shootPoint.position + shootPoint.forward * shootRange);
 
         // Detectar el disparo del jugador con la tecla "F"
-        if (Input.GetKeyDown(KeyCode.F))
+        if (input.Controles_F)
         {
             Shoot();
         }

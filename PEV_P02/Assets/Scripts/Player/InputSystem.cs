@@ -10,9 +10,7 @@ public class InputSystem : MonoBehaviour
     public float Controles_H;
     public float Controles_V;
     public bool Controles_J;
-    public bool Controles_R;
-    public bool Controles_C;
-    public bool Controles_Q;
+    public bool Controles_F;
 
 
 //_________________________________________________________________________________________________________________________________________________________________________________________//
@@ -21,7 +19,7 @@ public class InputSystem : MonoBehaviour
     void LateUpdate() // Es fa desprès del Update (és una acció que es realitza just desprès del Update normal)
     {
         Controles_J = false; // Li dius que no li estas donant a la tecla espai, que constantment està en FALSE fins que prems la tecla space i es posa TRUE
-        Controles_C = false;
+        Controles_F = false;
     }
 
 
@@ -43,14 +41,9 @@ public class InputSystem : MonoBehaviour
 
     }
 
-    public void OnCamera2()
+    public void OnShoot()
     {
-        Controles_C = true;
-    }
-
-    public void Dash()
-    {
-        Controles_Q = true;
+        Controles_F = true;
     }
 
 }

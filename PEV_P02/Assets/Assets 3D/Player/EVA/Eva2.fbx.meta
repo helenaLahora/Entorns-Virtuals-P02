@@ -1,8 +1,125 @@
 fileFormatVersion: 2
 guid: e51832c6fada14e4a94c7230cd09628a
 ModelImporter:
-  serializedVersion: 21300
-  internalIDToNameTable: []
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: -5076037838576400742
+    second: group1|eyes|Take 001|BaseLayer
+  - first:
+      74: 7100651697035082602
+    second: group1|group1|Take 001|BaseLayer
+  - first:
+      74: -1134538250387614673
+    second: group1|group2|Take 001|BaseLayer
+  - first:
+      74: -2029757834037204084
+    second: group1|left_arm|Take 001|BaseLayer
+  - first:
+      74: 2643734644180037076
+    second: group1|left_finger1|Take 001|BaseLayer
+  - first:
+      74: -4322407840249636382
+    second: group1|left_finger2|Take 001|BaseLayer
+  - first:
+      74: -1321440903836854002
+    second: group1|left_finger3|Take 001|BaseLayer
+  - first:
+      74: -6994262926454435245
+    second: group1|left_finger4|Take 001|BaseLayer
+  - first:
+      74: -1171231358636022123
+    second: group1|right_arm|Take 001|BaseLayer
+  - first:
+      74: 4042144734878254368
+    second: group1|right_finger1|Take 001|BaseLayer
+  - first:
+      74: 4647805192534212495
+    second: group1|right_finger2|Take 001|BaseLayer
+  - first:
+      74: -2334903002892739556
+    second: group1|right_finger3|Take 001|BaseLayer
+  - first:
+      74: -4016896033326452729
+    second: group1|right_finger4|Take 001|BaseLayer
+  - first:
+      74: 4604668930086633845
+    second: left_arm|eyes|Take 001|BaseLayer
+  - first:
+      74: -3516944689230011930
+    second: left_arm|group1|Take 001|BaseLayer
+  - first:
+      74: 1128713829832666107
+    second: left_arm|group2|Take 001|BaseLayer
+  - first:
+      74: -2874904031545943467
+    second: left_arm|left_arm|Take 001|BaseLayer
+  - first:
+      74: -1383551223571988747
+    second: left_arm|left_finger1|Take 001|BaseLayer
+  - first:
+      74: 3881104259352975434
+    second: left_arm|left_finger2|Take 001|BaseLayer
+  - first:
+      74: 1733981410974582037
+    second: left_arm|left_finger3|Take 001|BaseLayer
+  - first:
+      74: 6730245595080642510
+    second: left_arm|left_finger4|Take 001|BaseLayer
+  - first:
+      74: 4126711374304862581
+    second: left_arm|right_arm|Take 001|BaseLayer
+  - first:
+      74: 334943218193415514
+    second: left_arm|right_finger1|Take 001|BaseLayer
+  - first:
+      74: 6512978064874362354
+    second: left_arm|right_finger2|Take 001|BaseLayer
+  - first:
+      74: -4476029002144930999
+    second: left_arm|right_finger3|Take 001|BaseLayer
+  - first:
+      74: 4634324666416982607
+    second: left_arm|right_finger4|Take 001|BaseLayer
+  - first:
+      74: 4290996896861164130
+    second: group2|eyes|Take 001|BaseLayer
+  - first:
+      74: -8003415628294298025
+    second: group2|group1|Take 001|BaseLayer
+  - first:
+      74: -3225010294545081248
+    second: group2|group2|Take 001|BaseLayer
+  - first:
+      74: 5033623967266600135
+    second: group2|left_arm|Take 001|BaseLayer
+  - first:
+      74: -2683909321530868030
+    second: group2|left_finger1|Take 001|BaseLayer
+  - first:
+      74: -3670234920571874503
+    second: group2|left_finger2|Take 001|BaseLayer
+  - first:
+      74: 3162916815092405650
+    second: group2|left_finger3|Take 001|BaseLayer
+  - first:
+      74: 316630651598105610
+    second: group2|left_finger4|Take 001|BaseLayer
+  - first:
+      74: 1432662839239459564
+    second: group2|right_arm|Take 001|BaseLayer
+  - first:
+      74: -6901904015104385353
+    second: group2|right_finger1|Take 001|BaseLayer
+  - first:
+      74: 1953973762584465175
+    second: group2|right_finger2|Take 001|BaseLayer
+  - first:
+      74: 1145844066833919745
+    second: group2|right_finger3|Take 001|BaseLayer
+  - first:
+      74: -8011368231884691251
+    second: group2|right_finger4|Take 001|BaseLayer
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -14,7 +131,6 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -44,7 +160,6 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -56,7 +171,6 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -98,8 +212,6 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

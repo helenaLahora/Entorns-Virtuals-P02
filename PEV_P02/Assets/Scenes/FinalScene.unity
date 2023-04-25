@@ -608,9 +608,7 @@ MonoBehaviour:
   Controles_H: 0
   Controles_V: 0
   Controles_J: 0
-  Controles_R: 0
-  Controles_C: 0
-  Controles_Q: 0
+  Controles_F: 0
 --- !u!114 &198123373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,6 +2893,7 @@ MonoBehaviour:
   bulletSpeed: 300
   bulletLifetime: 0.5
   bulletDamage: 2
+  input: {fileID: 198123372}
 --- !u!1 &880502165
 GameObject:
   m_ObjectHideFlags: 3
