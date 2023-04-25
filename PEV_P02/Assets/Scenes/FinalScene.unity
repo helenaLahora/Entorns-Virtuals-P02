@@ -1806,7 +1806,7 @@ Transform:
   - {fileID: 525776042}
   - {fileID: 503462588}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525776041
 GameObject:
@@ -2684,7 +2684,7 @@ GameObject:
   - component: {fileID: 763237701}
   - component: {fileID: 763237700}
   m_Layer: 6
-  m_Name: NPC_2 (1)
+  m_Name: NPC_3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2860,7 +2860,7 @@ Transform:
   - {fileID: 889327376}
   - {fileID: 709991128}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &806891157
 GameObject:
@@ -4506,7 +4506,7 @@ Transform:
   - {fileID: 1545198129}
   - {fileID: 1327496518}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241521992
 GameObject:
@@ -4711,7 +4711,7 @@ Transform:
   - {fileID: 528424502}
   - {fileID: 423832108}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274113489
 GameObject:
@@ -6027,7 +6027,7 @@ Transform:
   - {fileID: 97262897}
   - {fileID: 1629445261}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1584226753
 MonoBehaviour:
@@ -6639,7 +6639,7 @@ RectTransform:
   m_Children:
   - {fileID: 139745910}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7581,7 +7581,7 @@ Transform:
   - {fileID: 868309080}
   - {fileID: 1771554705}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053466838
 GameObject:
@@ -9437,6 +9437,8 @@ MonoBehaviour:
   - {fileID: 1066301423}
   - {fileID: 304736790}
   - {fileID: 1298279698}
+  - {fileID: 525776042}
+  - {fileID: 503462588}
   actualWaypoint: 0
   Speed: 80
   agent: {fileID: 95471670960236275}
