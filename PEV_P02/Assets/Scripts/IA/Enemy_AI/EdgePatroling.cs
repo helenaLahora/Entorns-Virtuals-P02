@@ -12,9 +12,9 @@ public class EdgePatroling : MonoBehaviour
     private LayerMask WhatIsGround;
 
     [SerializeField]
-    float Speed = 3f;
+    float Speed = 30f;
 
-    private float maxDistToGround = 2f;
+    private float maxDistToGround = 20f;
 
     // Update is called once per frame
     void Update()
