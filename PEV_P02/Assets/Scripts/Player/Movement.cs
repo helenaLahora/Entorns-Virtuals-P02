@@ -11,10 +11,10 @@ public class Movement : MonoBehaviour
 
     [Header("Velocitats")]
     [SerializeField]
-    float WalkingSpeed = 8f;
+    float WalkingSpeed = 9f;
 
     [SerializeField]
-    float RotaionSpeed = 720f;
+    float RotaionSpeed = 250f;
 
 
     [Header("Smoothing")]
@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour
     //_________________________________________________________________________________________________________________________________________________________________________________________//
 
 
-    private void FixedUpdate() //PROBLEMA DEL GLITCH AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+    private void FixedUpdate() 
     {
         Move(input.Controles_H, input.Controles_V); // Agafa els dos vectors que he transformat en OnMove() --> els valors dels vectors de x/y
                                                     // Aquests vectors els agafem dels SCRIPT InputSystem
