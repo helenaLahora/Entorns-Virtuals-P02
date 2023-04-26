@@ -13,7 +13,7 @@ public class Waypoints : MonoBehaviour
     private float _minDistanceToTarget = 0.1f;
 
 
-    private float Speed = 10f;
+    private float Speed = 50f;
 
     [SerializeField]
     private int _index;
@@ -30,6 +30,7 @@ public class Waypoints : MonoBehaviour
     {
         if (ReachedWaypoint())
         {
+            Debug.Log("Reached");
             ChangeWaypoint();
         }
         Move();
@@ -37,6 +38,7 @@ public class Waypoints : MonoBehaviour
 
     private bool ReachedWaypoint()
     {
+        Debug.Log(Vector3.Distance(transform.position, CurrentTargetPos));
         return Vector3.Distance(transform.position, CurrentTargetPos) //que nos de la distancia entre ("nuestra posicion", y "la posicion objetivo");
             < _minDistanceToTarget;
     }
@@ -50,12 +52,9 @@ public class Waypoints : MonoBehaviour
         _index = UnityEngine.Random.Range(0, _waypoints.Length);
         //_index = _index % _waypoints.Length;
 
-        if (_index == _Last2index)
+        while (_index == _Last2index || _index == _Last1index)
         {
-            while (_index == _Last2index || _index == _Last1index)
-            {
-                _index = UnityEngine.Random.Range(0, _waypoints.Length);
-            }
+            _index = UnityEngine.Random.Range(0, _waypoints.Length);
         }
     }
 
