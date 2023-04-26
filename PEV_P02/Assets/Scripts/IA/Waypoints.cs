@@ -30,7 +30,7 @@ public class Waypoints : MonoBehaviour
     {
         if (ReachedWaypoint())
         {
-            Debug.Log("Reached");
+            Debug.Log("Reached " + Vector3.Distance(transform.position, CurrentTargetPos)+"   "+_index +"   "+ CurrentTargetPos);
             ChangeWaypoint();
         }
         Move();
@@ -38,7 +38,7 @@ public class Waypoints : MonoBehaviour
 
     private bool ReachedWaypoint()
     {
-        Debug.Log(Vector3.Distance(transform.position, CurrentTargetPos));
+        //Debug.Log(Vector3.Distance(transform.position, CurrentTargetPos));
         return Vector3.Distance(transform.position, CurrentTargetPos) //que nos de la distancia entre ("nuestra posicion", y "la posicion objetivo");
             < _minDistanceToTarget;
     }
