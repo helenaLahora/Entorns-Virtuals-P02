@@ -32,13 +32,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4280fb448fca5f948bb25d91b6e287bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wp: {fileID: 0}
+  wpPositions:
+  - {fileID: 4312131185208740181, guid: 754acc82d5cf789469078c8fcc0eaf88, type: 3}
+  - {fileID: 5034042205995942340, guid: 31c7ec2931cfd3d459024084a0a33171, type: 3}
+  - {fileID: 6552101859319959680, guid: ef3f1428b3200b44a8cfd329574335c0, type: 3}
+  - {fileID: 7076176099664528466, guid: 7b14679349303bb4eae6a249832c36bf, type: 3}
+  - {fileID: 8165989971867946069, guid: 0b5f5defa90fff34c816e5a6f274c8a7, type: 3}
+  - {fileID: 163848873200933232, guid: 23f2661589f020142bcc0f618a5f4ae0, type: 3}
+  - {fileID: 3587720380575841799, guid: 5c50a1802cf174440abff42c2e335805, type: 3}
+  - {fileID: 8915284018144329060, guid: 57bbe5e711148de4faa2a0993b4c8038, type: 3}
+  - {fileID: 2459754500589414742, guid: 7e5e49b46115f11498adafd23d3ee8ae, type: 3}
+  - {fileID: 5051011969866906337, guid: 6dfc1329c4b535947a60f06312c82919, type: 3}
   detectionDistance: 70
-  WaitTime: 3
+  WaitTime: 8
 --- !u!1101 &-6403753225406630535
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -101,8 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82d02b257699b74fab9978c2806e13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerIdle: 0
   detectionDistance: 70
-  WaitTime: 2
+  WaitTimeIdle: 2
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -137,6 +150,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &1090687565440500359
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dfbea0f9c0cde48b67dea79cf2a41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &1101032411631014566
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -797,7 +822,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6356848603815155632}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 1090687565440500359}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
