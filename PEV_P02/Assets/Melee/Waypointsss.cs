@@ -237,8 +237,8 @@ public class Waypointsss : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Execute(animator);
         CheckTriggers(animator);
+        Execute(animator);
     }
 
     private void Execute(Animator animator)
@@ -251,7 +251,7 @@ public class Waypointsss : StateMachineBehaviour
         {
             ChangeWaypoint();
         }
-        Move(animator);
+        MoveToWaypoint(animator);
     }
 
     private void CheckTriggers(Animator animator)
@@ -261,7 +261,6 @@ public class Waypointsss : StateMachineBehaviour
 
         bool timeUp = IsTimeUp();
         animator.SetBool("IsPatrolling", !timeUp); //invertim el valor de patrolling a false quan el temps de wander s'ha acabat
-
     }
 
     private bool IsPlayerClose(Transform player, Transform mySelf)
@@ -272,9 +271,12 @@ public class Waypointsss : StateMachineBehaviour
     private bool IsTimeUp()
     {
         return _timer > WaitTime; //ho retorna si ?s m?s gran que el wait time
+        //if (_timer > WaitTime)
+        //{
+        //    _index = _Last1index;
+        //    //_timer = 0;
+        //}
     }
-
-
 
     //______________________________________________________________________________________________________________________________________________________________//
 
@@ -286,34 +288,28 @@ public class Waypointsss : StateMachineBehaviour
 
     private void ChangeWaypoint()
     {
-
         _Last2index = _Last1index;
         _Last1index = _index;
 
         _index = UnityEngine.Random.Range(0, _waypoints.Length);
 
-        if (_index == _Last2index)
+        while (_index == _Last2index || _index == _Last1index)
         {
-            while (_index == _Last2index || _index == _Last1index)
-            {
-                _index = UnityEngine.Random.Range(0, _waypoints.Length);
-            }
+            _index = UnityEngine.Random.Range(0, _waypoints.Length);
         }
+        //if (_index == _Last2index)
+        //{
+        //    while (_index == _Last2index || _index == _Last1index)
+        //    {
+        //        _index = UnityEngine.Random.Range(0, _waypoints.Length);
+        //    }
+        //}
     }
 
-    private void Move(Animator animator)
+    private void MoveToWaypoint(Animator animator)
     {
-
         animator.transform.LookAt(CurrentTargetPos); //esto es suficiente para que mire en la direccion que queremos que vaya
         animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-
     }
 
 }
-
-
-
-
-
-
-

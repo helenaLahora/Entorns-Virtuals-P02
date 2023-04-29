@@ -55,7 +55,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Idle_fsm : StateMachineBehaviour
+public class IdleFSM : StateMachineBehaviour
 {
     Transform _player;
     float _timer;
