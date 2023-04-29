@@ -294,7 +294,6 @@ public class Waypointsss : StateMachineBehaviour
 
     private void ChangeWaypoint()
     {
-
         _Last2index = _Last1index;
         _Last1index = _index;
 
@@ -311,12 +310,9 @@ public class Waypointsss : StateMachineBehaviour
 
     private void Move(Animator animator)
     {
-
         animator.transform.LookAt(CurrentTargetPos); //esto es suficiente para que mire en la direccion que queremos que vaya
         animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-
     }
-
 }
 
 

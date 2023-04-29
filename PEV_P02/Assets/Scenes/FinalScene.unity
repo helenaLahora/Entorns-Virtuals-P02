@@ -4360,14 +4360,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264918378}
-  m_LocalRotation: {x: -0, y: -0.867164, z: -0, w: 0.4980228}
+  m_LocalRotation: {x: 0, y: -0.86602545, z: 0, w: 0.49999994}
   m_LocalPosition: {x: -51.302456, y: 5.96, z: 20.564701}
   m_LocalScale: {x: 10.781582, y: 13.399682, z: 10.781582}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 127544346920170784}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -120.261, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!64 &1264918380
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7268,7 +7268,7 @@ MonoBehaviour:
   WalkingSpeed: 8
   RotaionSpeed: 720
   smoothing_Ground: 0.15
-  smoothing_Air: 0.15
+  smoothing_Air: 0.2
   input: {fileID: 1951789174}
   saltito: {fileID: 1951789173}
   _lastVelocity_Y: 0
@@ -9210,7 +9210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837318250598559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48, y: 68.4, z: 149}
+  m_LocalPosition: {x: -48, y: 58.9, z: 149}
   m_LocalScale: {x: 16.163519, y: 16.163519, z: 16.163519}
   m_ConstrainProportionsScale: 0
   m_Children:

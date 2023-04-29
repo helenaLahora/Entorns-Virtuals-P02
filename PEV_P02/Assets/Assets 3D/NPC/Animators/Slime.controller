@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77777ac5ec5025c44b7495883bd23c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 30
+  DetectionDistance: 60
   _minDistanceToTarget: 0.1
   _index: 0
   _Last1index: 0
@@ -1071,6 +1071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dfbea0f9c0cde48b67dea79cf2a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionDistance: 60
+  _minDistanceToTarget: 5
+  Speed: 30
 --- !u!114 &9192089831126401775
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,5 +1086,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6fd203cbee0524c88093535c0d8737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 30
+  DetectionDistance: 60
   WaitTime: 3

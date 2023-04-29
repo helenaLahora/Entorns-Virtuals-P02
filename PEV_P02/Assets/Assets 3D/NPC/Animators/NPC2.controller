@@ -16,7 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Speed: 30
-  DetectionDistance: 30
+  DetectionDistance: 60
   WaitTime: 10
 --- !u!114 &-7766000052572741580
 MonoBehaviour:
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fc68a6d2f913445a49a44cc317548a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 30
+  DetectionDistance: 60
   WaitTime: 3
 --- !u!1101 &-4071321448939114908
 AnimatorStateTransition:
@@ -792,3 +792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dfbea0f9c0cde48b67dea79cf2a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionDistance: 30
+  _minDistanceToTarget: 5
+  Speed: 30
