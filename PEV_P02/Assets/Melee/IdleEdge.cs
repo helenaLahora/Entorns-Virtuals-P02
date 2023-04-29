@@ -13,7 +13,7 @@ public class IdleEdge: StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
         _timer = 0;
     }
 
