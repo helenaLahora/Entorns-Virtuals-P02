@@ -919,7 +919,7 @@ AnimatorStateMachine:
     m_Position: {x: 1310, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102835054974116572}
-    m_Position: {x: 1040, y: 60, z: 0}
+    m_Position: {x: 840, y: 300, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77777ac5ec5025c44b7495883bd23c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 60
+  DetectionDistance: 30
   _minDistanceToTarget: 0.1
   _index: 0
   _Last1index: 0
@@ -1083,5 +1083,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6fd203cbee0524c88093535c0d8737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 60
+  DetectionDistance: 30
   WaitTime: 3

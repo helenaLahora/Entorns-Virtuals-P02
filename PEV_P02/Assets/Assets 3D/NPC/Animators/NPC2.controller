@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33235bf8fbe27ad43a4ff4d4135b91d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CastPoint: {fileID: 5869552480207011666, guid: b6615c94ab5c3d5449106c10f97c5802, type: 3}
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
   Speed: 30
-  DetectionDistance: 10
+  DetectionDistance: 30
   WaitTime: 10
 --- !u!114 &-7766000052572741580
 MonoBehaviour:
@@ -45,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fc68a6d2f913445a49a44cc317548a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDistance: 10
+  DetectionDistance: 30
   WaitTime: 3
 --- !u!1101 &-4071321448939114908
 AnimatorStateTransition:
