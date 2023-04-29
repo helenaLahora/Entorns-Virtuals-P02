@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
-  _timerIdle: 0
-  detectionDistance: 70
-  WaitTimeIdle: 2
+  _timer: 0
+  DetectionDistance: 10
+  WaitTime: 3
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ AnimatorState:
   - {fileID: 1872445442289593872}
   - {fileID: -7717385467686206921}
   m_StateMachineBehaviours:
-  - {fileID: -1096705171189848644}
+  - {fileID: 9192089831126401775}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -669,7 +669,7 @@ AnimatorState:
   - {fileID: -6403753225406630535}
   - {fileID: 4375149754449966807}
   m_StateMachineBehaviours:
-  - {fileID: 2769493330901242549}
+  - {fileID: 3734445822593489311}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -979,6 +979,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0a41f1e552ea7428dce3b0bf631759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  DetectionDistance: 10
+  _waypoints:
+  - {fileID: 4312131185208740181, guid: 754acc82d5cf789469078c8fcc0eaf88, type: 3}
+  - {fileID: 5034042205995942340, guid: 31c7ec2931cfd3d459024084a0a33171, type: 3}
+  - {fileID: 6552101859319959680, guid: ef3f1428b3200b44a8cfd329574335c0, type: 3}
+  - {fileID: 7076176099664528466, guid: 7b14679349303bb4eae6a249832c36bf, type: 3}
+  - {fileID: 8165989971867946069, guid: 0b5f5defa90fff34c816e5a6f274c8a7, type: 3}
+  - {fileID: 163848873200933232, guid: 23f2661589f020142bcc0f618a5f4ae0, type: 3}
+  - {fileID: 3587720380575841799, guid: 5c50a1802cf174440abff42c2e335805, type: 3}
+  - {fileID: 8915284018144329060, guid: 57bbe5e711148de4faa2a0993b4c8038, type: 3}
+  - {fileID: 2459754500589414742, guid: 7e5e49b46115f11498adafd23d3ee8ae, type: 3}
+  - {fileID: 5051011969866906337, guid: 6dfc1329c4b535947a60f06312c82919, type: 3}
+  _minDistanceToTarget: 0.1
+  Speed: 50
+  _index: 0
+  _Last1index: 0
+  _Last2index: 0
+  _timer: 0
+  WaitTime: 5
+--- !u!114 &3734445822593489311
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d3f19e65dd05c428e2e8fa8575aa24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   DetectionDistance: 10
   _waypoints:
   - {fileID: 4312131185208740181, guid: 754acc82d5cf789469078c8fcc0eaf88, type: 3}
@@ -995,7 +1027,7 @@ MonoBehaviour:
   _index: 0
   _Last1index: 0
   _Last2index: 0
-  WaitTime: 5
+  WaitTime: 10
 --- !u!1101 &4375149754449966807
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1021,3 +1053,17 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &9192089831126401775
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6fd203cbee0524c88093535c0d8737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectionDistance: 3
+  WaitTime: 3

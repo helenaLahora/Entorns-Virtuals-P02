@@ -70,7 +70,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TurtleShell
+  m_Name: NPC3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsPatrolling
@@ -587,7 +587,7 @@ AnimatorState:
   - {fileID: 4645272032049128774}
   - {fileID: -103476995256218812}
   m_StateMachineBehaviours:
-  - {fileID: 4648130713120071098}
+  - {fileID: 7529332635443773324}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -744,6 +744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82d02b257699b74fab9978c2806e13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _timer: 0
   DetectionDistance: 10
   WaitTime: 2
 --- !u!114 &4755581676108121233
@@ -765,15 +767,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33235bf8fbe27ad43a4ff4d4135b91d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CastPoint: {fileID: 1336119721645302202, guid: 27e29119eb8871144ac8f595c67a3feb, type: 3}
+  CastPoint: {fileID: 8605620789284273047, guid: 68c7b2acc6f927f458f5810baea6755f, type: 3}
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
   Speed: 30
+  DetectionDistance: 10
+  WaitTime: 3
+--- !u!114 &7529332635443773324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fc68a6d2f913445a49a44cc317548a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   DetectionDistance: 10
   WaitTime: 3
