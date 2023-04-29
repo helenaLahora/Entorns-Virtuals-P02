@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - EnemyWay
+  - EnemyEdge
   layers:
   - Default
   - TransparentFX

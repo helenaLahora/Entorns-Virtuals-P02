@@ -6,6 +6,7 @@ using UnityEngine;
 public class EdgePatrolling : StateMachineBehaviour
 {
     Transform _player;
+    float _timer;
 
     [SerializeField]
     Transform CastPoint;
@@ -18,14 +19,31 @@ public class EdgePatrolling : StateMachineBehaviour
 
     private float maxDistToGround = 20f;
 
+    public float DetectionDistance = 10;
+    public float WaitTime = 3;
+
+    
+    //______________________________________________________________________________________________________________________________________________________________//
+
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _player = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
+        _timer = 0;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Execute(animator);
+        CheckTriggers(animator);
+    }
+    
+    //______________________________________________________________________________________________________________________________________________________________//
+
+    private void Execute(Animator animator)
+    {
+        _timer += Time.deltaTime;
+
         if (EdgeDetected())
         {
             Rotate();
@@ -35,7 +53,30 @@ public class EdgePatrolling : StateMachineBehaviour
             Move();
         }
     }
+
+    private void CheckTriggers(Animator animator)
+    {
+        bool isPlayerClose = IsPlayerClose(_player, animator.transform);
+        animator.SetBool("IsChasing", isPlayerClose);
+
+        bool timeUp = IsTimeUp();
+        animator.SetBool("IsPatrolling", !timeUp); //invertim el valor de patrolling a false quan el temps de wander s'ha acabat
+
+    }
+
+    private bool IsPlayerClose(Transform player, Transform mySelf)
+    {
+        return Vector3.Distance(player.position, mySelf.position) < DetectionDistance;
+    }
+
+
+    private bool IsTimeUp()
+    {
+        return _timer > WaitTime;
+    }
     
+    //______________________________________________________________________________________________________________________________________________________________//
+
     private void Move()
     {
         _player.transform.Translate(Vector3.forward * Speed * Time.deltaTime);

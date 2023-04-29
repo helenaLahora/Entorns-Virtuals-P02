@@ -55,7 +55,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleFSM : StateMachineBehaviour
+public class IdleWay : StateMachineBehaviour
 {
     Transform _player;
     float _timer;
@@ -65,7 +65,7 @@ public class IdleFSM : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _player = GameObject.FindGameObjectWithTag("EnemyWay").transform;
         _timer = 0;
     }
 
