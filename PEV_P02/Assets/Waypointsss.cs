@@ -204,8 +204,7 @@ public class Waypointsss : StateMachineBehaviour
 
     public float DetectionDistance = 10;
 
-    [SerializeField]
-    public Transform[] _waypoints;
+    Transform[] _waypoints;
 
     [SerializeField]
     private float _minDistanceToTarget = 0.1f;
@@ -231,8 +230,17 @@ public class Waypointsss : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("EnemyWay").transform;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
         _timer = 0;
+
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Waypoints");
+
+        _waypoints = new Transform[gameObjects.Length];
+
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            _waypoints[i] = gameObjects[i].transform;
+        }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

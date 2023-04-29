@@ -6,9 +6,9 @@ using UnityEngine;
 public class EdgePatrolling : StateMachineBehaviour
 {
     Transform _player;
+    Transform _enemy;
     float _timer;
 
-    [SerializeField]
     Transform CastPoint;
 
     [SerializeField]
@@ -28,7 +28,11 @@ public class EdgePatrolling : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _enemy = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
+
+        CastPoint = GameObject.FindGameObjectWithTag("Castpoints").transform;
+
         _timer = 0;
     }
 
@@ -79,13 +83,13 @@ public class EdgePatrolling : StateMachineBehaviour
 
     private void Move()
     {
-        _player.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        _enemy.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
     private void Rotate()
     {
         float rot = UnityEngine.Random.Range(90,270);
-        _player.transform.Rotate(new Vector3(0, rot, 0));
+        _enemy.transform.Rotate(new Vector3(0, rot, 0));
     }
 
     private bool EdgeDetected()

@@ -1054,17 +1054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectionDistance: 60
-  _waypoints:
-  - {fileID: 4312131185208740181, guid: 754acc82d5cf789469078c8fcc0eaf88, type: 3}
-  - {fileID: 5034042205995942340, guid: 31c7ec2931cfd3d459024084a0a33171, type: 3}
-  - {fileID: 6552101859319959680, guid: ef3f1428b3200b44a8cfd329574335c0, type: 3}
-  - {fileID: 7076176099664528466, guid: 7b14679349303bb4eae6a249832c36bf, type: 3}
-  - {fileID: 8165989971867946069, guid: 0b5f5defa90fff34c816e5a6f274c8a7, type: 3}
-  - {fileID: 163848873200933232, guid: 23f2661589f020142bcc0f618a5f4ae0, type: 3}
-  - {fileID: 3587720380575841799, guid: 5c50a1802cf174440abff42c2e335805, type: 3}
-  - {fileID: 8915284018144329060, guid: 57bbe5e711148de4faa2a0993b4c8038, type: 3}
-  - {fileID: 2459754500589414742, guid: 7e5e49b46115f11498adafd23d3ee8ae, type: 3}
-  - {fileID: 5051011969866906337, guid: 6dfc1329c4b535947a60f06312c82919, type: 3}
   _minDistanceToTarget: 0.1
   _index: 0
   _Last1index: 0

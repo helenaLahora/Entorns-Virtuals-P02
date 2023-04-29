@@ -6,6 +6,8 @@ TagManager:
   tags:
   - EnemyWay
   - EnemyEdge
+  - Castpoints
+  - Waypoints
   layers:
   - Default
   - TransparentFX
