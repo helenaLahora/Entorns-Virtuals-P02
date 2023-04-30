@@ -24,18 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dash",
+                    "name": "Shoot",
                     "type": "Button",
-                    "id": "8909ea46-0458-43ca-84c1-01784c3135c6",
+                    "id": "f80f3490-7684-477c-bbb0-d21d68d1d3b5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Mele",
                     "type": "Button",
-                    "id": "f80f3490-7684-477c-bbb0-d21d68d1d3b5",
+                    "id": "e6bf18d0-da39-420b-87ef-42799a52de5e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -188,23 +188,23 @@
                 },
                 {
                     "name": "",
-                    "id": "c665d7e2-c03a-428f-8cc2-f59b080a9923",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8f391773-1914-4fbb-a209-c1eee65154c6",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da044668-fc56-45e9-a80f-cd4fb07181ac",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mele",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

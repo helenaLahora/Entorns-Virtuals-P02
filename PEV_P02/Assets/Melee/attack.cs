@@ -68,15 +68,15 @@ public class attack : StateMachineBehaviour
         return Vector3.Distance(mySelf.position, player.position) >= _minDistanceToTarget;
     }
 
-    private void ChangePos(Transform player)
-    {
-        posPlayer = new Vector3();
-        posPlayer = _player.position;
-    }
+    //private void ChangePos(Transform player)
+    //{
+    //    posPlayer = new Vector3();
+    //    posPlayer = _player.position;
+    //}
 
-    private void Move(Animator animator)
-    {
-        animator.transform.LookAt(posPlayer); //esto es suficiente para que mire en la direccion que queremos que vaya
-        animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-    }
+    //private void Move(Animator animator)
+    //{
+    //    animator.transform.LookAt(posPlayer); //esto es suficiente para que mire en la direccion que queremos que vaya
+    //    animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+    //}
 }

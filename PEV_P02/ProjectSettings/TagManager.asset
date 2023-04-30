@@ -8,6 +8,7 @@ TagManager:
   - EnemyEdge
   - Castpoints
   - Waypoints
+  - Enemies
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyDamage : MonoBehaviour
 {
     public float EnemyDamage;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")

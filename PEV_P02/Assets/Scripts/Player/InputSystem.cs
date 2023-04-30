@@ -11,15 +11,17 @@ public class InputSystem : MonoBehaviour
     public float Controles_V;
     public bool Controles_J;
     public bool Controles_F;
+    public bool Controles_E;
 
 
-//_________________________________________________________________________________________________________________________________________________________________________________________//
+    //_________________________________________________________________________________________________________________________________________________________________________________________//
 
 
     void LateUpdate() // Es fa desprès del Update (és una acció que es realitza just desprès del Update normal)
     {
         Controles_J = false; // Li dius que no li estas donant a la tecla espai, que constantment està en FALSE fins que prems la tecla space i es posa TRUE
         Controles_F = false;
+        Controles_E = false;
     }
 
 
@@ -46,4 +48,8 @@ public class InputSystem : MonoBehaviour
         Controles_F = true;
     }
 
+    public void OnMele()
+    {
+        Controles_E = true;
+    }
 }

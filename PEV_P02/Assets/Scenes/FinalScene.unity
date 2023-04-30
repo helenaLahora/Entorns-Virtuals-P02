@@ -766,6 +766,7 @@ MonoBehaviour:
   Controles_V: 0
   Controles_J: 0
   Controles_F: 0
+  Controles_E: 0
 --- !u!114 &198123373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,6 +7254,7 @@ MonoBehaviour:
   Controles_V: 0
   Controles_J: 0
   Controles_F: 0
+  Controles_E: 0
 --- !u!114 &1951789175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7345,7 +7347,7 @@ Animator:
   m_GameObject: {fileID: 1951789169}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7355,6 +7357,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1951789179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951789169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c64b2fd707bac24a9006419cf91621a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 1951789174}
+  _animator: {fileID: 1951789178}
+  Shootable:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1956465647
 GameObject:
   m_ObjectHideFlags: 0
@@ -8506,7 +8525,6 @@ GameObject:
   - component: {fileID: 95528395924870396}
   - component: {fileID: 95528395924870397}
   - component: {fileID: 95528395924870398}
-  - component: {fileID: 95528395924870402}
   m_Layer: 6
   m_Name: NPC_2
   m_TagString: EnemyEdge
@@ -9456,23 +9474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 5
---- !u!114 &95528395924870402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837318250598559}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ec79d22f44c724d92c34dd6221c9cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CastPoint: {fileID: 610708739}
-  WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  Speed: 30
 --- !u!4 &127544346920170784
 Transform:
   m_ObjectHideFlags: 0
