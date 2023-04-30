@@ -20,7 +20,7 @@ public class bala : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemies")
         {
-            other.GetComponent<SistemaSalud>().Salud -= BulletDamage * 1;
+            other.GetComponent<SistemaSalud>().Salud -= BulletDamage * 1.5f;
         }
         Destroy(this.gameObject);
     }
