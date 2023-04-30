@@ -1,53 +1,40 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleEdge: StateMachineBehaviour
+public class Damage_NPC3 : StateMachineBehaviour
 {
     Transform _player;
-    float _timer;
+    Transform _enemy;
 
-    public float DetectionDistance = 10;
-    public float WaitTime = 3;
+    public float DetectionDmg = 10;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _timer = 0;
+        _enemy = GameObject.FindGameObjectWithTag("Enemies").transform;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        Execute();
+        Execute(animator);
         CheckTriggers(animator);
-
     }
 
-    private void Execute()
+    private void Execute(Animator animator)
     {
-        _timer += Time.deltaTime;
+        _enemy.LookAt(_player);
+        animator.SetBool("Damage", true);
     }
-
 
     private void CheckTriggers(Animator animator)
     {
         bool isPlayerClose = IsPlayerClose(_player, animator.transform);
-        animator.SetBool("IsChasing", isPlayerClose);
-
-        bool timeUp = IsTimeUp();
-        animator.SetBool("IsPatrolling", timeUp);
-    }
-
-    private bool IsTimeUp()
-    {
-        return _timer > WaitTime;
+        animator.SetBool("Damage", isPlayerClose);
     }
 
     private bool IsPlayerClose(Transform player, Transform mySelf)
     {
-        return Vector3.Distance(player.position, mySelf.position) < DetectionDistance;
+        return Vector3.Distance(player.position, mySelf.position) > DetectionDmg;
     }
 }
-
