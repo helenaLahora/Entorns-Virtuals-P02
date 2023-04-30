@@ -16,7 +16,7 @@ public class MelePlayer : MonoBehaviour
 
     CharacterController _charactercontroler;
 
-
+    public bool isMele = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +30,13 @@ public class MelePlayer : MonoBehaviour
     {
         if (Meles())
         {
-            Debug.Log("mele");
             AttackMele();
         }
         else
         {
             _animator.SetBool("Attack", false);
+
+            isMele = false;
         }        
     }
 
@@ -46,6 +47,8 @@ public class MelePlayer : MonoBehaviour
 
     private void AttackMele()
     {
-        _animator.SetBool("Attack", true);
+        _animator.SetBool("Attack", true);       
+        
+        isMele = true;
     }
 }

@@ -34,19 +34,11 @@ public class attack : StateMachineBehaviour
     private void Execute(Animator animator)
     {
         animator.transform.LookAt(_player);
-        Debug.Log("before attack");
+
         if (ReachedPlayer(animator.transform, _player))
         {
-            Debug.Log("attack");
             animator.transform.position += animator.transform.forward * Speed * Time.deltaTime;
-
-            //posPlayer = new Vector3();
-            //posPlayer = _player.position;
-            //ChangePos(_player);
         }
-        //animator.transform.LookAt(posPlayer); //esto es suficiente para que mire en la direccion que queremos que vaya
-        //animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-        //Move(animator);
     }
 
     private void CheckTriggers(Animator animator)
@@ -67,16 +59,4 @@ public class attack : StateMachineBehaviour
         //que nos de la distancia entre ("nuestra posicion", y "la posicion objetivo");
         return Vector3.Distance(mySelf.position, player.position) >= _minDistanceToTarget;
     }
-
-    //private void ChangePos(Transform player)
-    //{
-    //    posPlayer = new Vector3();
-    //    posPlayer = _player.position;
-    //}
-
-    //private void Move(Animator animator)
-    //{
-    //    animator.transform.LookAt(posPlayer); //esto es suficiente para que mire en la direccion que queremos que vaya
-    //    animator.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-    //}
 }

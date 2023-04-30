@@ -29,7 +29,7 @@ public class EdgePatrolling : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _enemy = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
+        _enemy = GameObject.FindGameObjectWithTag("Enemies").transform;
 
         CastPoint = GameObject.FindGameObjectWithTag("Castpoints").transform;
 
