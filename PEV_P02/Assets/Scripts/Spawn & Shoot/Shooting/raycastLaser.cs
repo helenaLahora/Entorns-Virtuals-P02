@@ -16,6 +16,10 @@ public class raycastLaser : MonoBehaviour
     public float bulletLifetime = 2f; // Tiempo de vida de la bala
     public float bulletDamage = 2f;
 
+    public bool ModoDisparo;
+    float actualTimer = 0.0f;
+    public float ShootDelay = 0.2f;
+
     [SerializeField]
     InputSystem input;
 
@@ -41,27 +45,42 @@ public class raycastLaser : MonoBehaviour
         laser.SetPosition(1, shootPoint.position + shootPoint.forward * shootRange);
 
         // Detectar el disparo del jugador con cick izquiedo
-        if (Input.GetMouseButtonDown(0))
+
+        if (!ModoDisparo)
         {
-            Shoot();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
+            {
+                if (actualTimer <= 0)
+                {
+                    Shoot();
+                    actualTimer = ShootDelay;
+                }
+            }
+
+            actualTimer -= Time.deltaTime;
         }
     }
 
     void Shoot()
     {
         // Instanciar el proyectil solo si el l�ser est� habilitado
-        if (laser.enabled)
+        GameObject bullet = null;
+        if (bullet == null)
         {
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+            bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
             Debug.Log("script bala llamado");
             bullet.GetComponent<bala>().BulletLife = bulletLifetime;
             bullet.GetComponent<bala>().BulletDamage = bulletDamage;
             Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
 
             bulletRigidbody.velocity = shootPoint.forward * bulletSpeed; // Usar la variable de velocidad de la bala
-
-            // Destruir la bala despu�s de cierto tiempo si no colisiona con ning�n objeto
-            Destroy(bullet, bulletLifetime); // Usar la variable
         }
     }
 }

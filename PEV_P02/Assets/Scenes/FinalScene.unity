@@ -2372,6 +2372,10 @@ PrefabInstance:
       value: Pistola Arcoiris
       objectReference: {fileID: 0}
     - target: {fileID: 7971902087097843264, guid: e449772d7d0108b41be74637cadc6430, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971902087097843264, guid: e449772d7d0108b41be74637cadc6430, type: 3}
       propertyPath: m_TagString
       value: Arma
       objectReference: {fileID: 0}
@@ -2435,6 +2439,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1951789174}
+    - target: {fileID: 7971902087209456709, guid: e449772d7d0108b41be74637cadc6430, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7971902087209456709, guid: e449772d7d0108b41be74637cadc6430, type: 3}
       propertyPath: shootPoint
       value: 
@@ -3014,6 +3022,8 @@ MonoBehaviour:
   bulletSpeed: 300
   bulletLifetime: 1
   bulletDamage: 10
+  ModoDisparo: 0
+  ShootDelay: 0.2
   input: {fileID: 1951789174}
 --- !u!1 &880502165
 GameObject:
@@ -6554,6 +6564,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8455500279230991522, guid: c39315df5a839734f94be03709efc30b, type: 3}
+--- !u!1 &1931660755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3879779668545612697, guid: e449772d7d0108b41be74637cadc6430, type: 3}
+  m_PrefabInstance: {fileID: 842048457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1942745701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7085,6 +7100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlArmas: {fileID: 2031872556}
   posicionArma: {fileID: 688098136}
+  Armainicial: {fileID: 553760455}
+  ArmaArcoiris: {fileID: 1931660755}
 --- !u!1 &1956465647
 GameObject:
   m_ObjectHideFlags: 0
