@@ -40,8 +40,8 @@ public class raycastLaser : MonoBehaviour
         laser.SetPosition(0, shootPoint.position);
         laser.SetPosition(1, shootPoint.position + shootPoint.forward * shootRange);
 
-        // Detectar el disparo del jugador con la tecla "F"
-        if (input.Controles_F)
+        // Detectar el disparo del jugador con cick izquiedo
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
@@ -49,10 +49,11 @@ public class raycastLaser : MonoBehaviour
 
     void Shoot()
     {
-        // Instanciar el proyectil solo si el l�ser est� habilitado (se hace clic en la tecla "F")
+        // Instanciar el proyectil solo si el l�ser est� habilitado
         if (laser.enabled)
         {
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+            Debug.Log("script bala llamado");
             bullet.GetComponent<bala>().BulletLife = bulletLifetime;
             bullet.GetComponent<bala>().BulletDamage = bulletDamage;
             Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();

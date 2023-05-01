@@ -9,6 +9,7 @@ TagManager:
   - Castpoints
   - Waypoints
   - Enemies
+  - Arma
   layers:
   - Default
   - TransparentFX
