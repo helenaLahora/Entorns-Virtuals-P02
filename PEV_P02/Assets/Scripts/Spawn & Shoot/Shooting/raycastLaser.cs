@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class raycastLaser : MonoBehaviour
 {
+
     public float shootRange = 100f; // Rango m�ximo de disparo
     public LayerMask Shootable; // Capa que representa los objetos disparables
     public GameObject bulletPrefab; // Prefab del proyectil
