@@ -94,13 +94,13 @@ public class Walking_NPC3 : StateMachineBehaviour
 
     private void Move()
     {
-        _enemy.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        if (!_enemy) _enemy.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
     private void Rotate()
     {
         float rot = UnityEngine.Random.Range(90, 270);
-        _enemy.transform.Rotate(new Vector3(0, rot, 0));
+        if (!_enemy) _enemy.transform.Rotate(new Vector3(0, rot, 0));
     }
 
     private bool EdgeDetected()

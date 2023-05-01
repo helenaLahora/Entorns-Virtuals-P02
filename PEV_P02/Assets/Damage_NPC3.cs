@@ -23,7 +23,7 @@ public class Damage_NPC3 : StateMachineBehaviour
 
     private void Execute(Animator animator)
     {
-        _enemy.LookAt(_player);
+        if (!_enemy && !_player) _enemy.LookAt(_player);
         animator.SetBool("Damage", true);
     }
 
