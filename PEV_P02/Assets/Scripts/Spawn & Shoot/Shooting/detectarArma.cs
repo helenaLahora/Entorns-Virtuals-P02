@@ -11,6 +11,7 @@ public class detectarArma : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Arma")) { // verifica si el objeto que ha entrado en colisión es un arma
             Arma arma = other.GetComponent<Arma>(); // obtiene el script de arma del objeto que ha entrado en colisión
+            
             if (arma != null && !controlArmas.armas.Contains(arma)) {
                 controlArmas.armas.Add(arma); // agrega el arma a la lista de armas del controlador de armas
                 Debug.Log("Arma " + arma.name + " agregada a la lista de armas");

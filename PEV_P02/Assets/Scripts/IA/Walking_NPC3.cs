@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +31,7 @@ public class Walking_NPC3 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _enemy = GameObject.FindGameObjectWithTag("Enemies").transform;
+        _enemy = GameObject.FindGameObjectWithTag("EnemyWay").transform;
 
         CastPoint = GameObject.FindGameObjectWithTag("Castpoints").transform;
 
@@ -94,13 +95,13 @@ public class Walking_NPC3 : StateMachineBehaviour
 
     private void Move()
     {
-        if (!_enemy) _enemy.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        _enemy.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 
     private void Rotate()
     {
         float rot = UnityEngine.Random.Range(90, 270);
-        if (!_enemy) _enemy.transform.Rotate(new Vector3(0, rot, 0));
+        _enemy.transform.Rotate(new Vector3(0, rot, 0));
     }
 
     private bool EdgeDetected()
