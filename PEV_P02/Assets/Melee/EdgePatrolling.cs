@@ -32,7 +32,7 @@ public class EdgePatrolling : StateMachineBehaviour
         _enemy = GameObject.FindGameObjectWithTag("EnemyEdge").transform;
         Debug.Log(_enemy);
 
-        CastPoint = GameObject.FindGameObjectWithTag("Castpoints").transform;
+        CastPoint = GameObject.FindGameObjectWithTag("Castpoints2").transform;
 
         _timer = 0;
     }
