@@ -17,7 +17,7 @@ public class EdgePatrolling : StateMachineBehaviour
     [SerializeField]
     float Speed = 30f;
 
-    private float maxDistToGround = 20f;
+    public float maxDistToGround = 8f;
 
     public float DetectionDistance = 10;
     public float WaitTime = 3;

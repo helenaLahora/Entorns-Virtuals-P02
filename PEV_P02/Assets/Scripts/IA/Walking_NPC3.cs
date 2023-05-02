@@ -13,12 +13,12 @@ public class Walking_NPC3 : StateMachineBehaviour
     Transform CastPoint;
 
     [SerializeField]
-    private LayerMask WhatIsGround;
+    public LayerMask WhatIsGround;
 
     [SerializeField]
     float Speed = 30f;
 
-    private float maxDistToGround = 20f;
+    public float maxDistToGround = 10f;
 
     public float DetectionJump = 10;
     public float DetectionDmg = 10;

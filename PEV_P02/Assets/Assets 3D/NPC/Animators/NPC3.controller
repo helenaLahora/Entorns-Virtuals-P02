@@ -554,7 +554,8 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  Speed: 20
+  Speed: 30
+  maxDistToGround: 8
   DetectionJump: 40
   DetectionDmg: 100
   WaitTime: 10

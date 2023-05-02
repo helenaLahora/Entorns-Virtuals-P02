@@ -17,7 +17,7 @@ public class JumpBehaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _enemy = GameObject.FindGameObjectWithTag("Enemies").transform;
+        _enemy = GameObject.FindGameObjectWithTag("EnemyWay").transform;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

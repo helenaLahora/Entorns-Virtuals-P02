@@ -14,11 +14,11 @@ public class detectarArma : MonoBehaviour {
             
             if (arma != null && !controlArmas.armas.Contains(arma)) {
                 controlArmas.armas.Add(arma); // agrega el arma a la lista de armas del controlador de armas
-                Debug.Log("Arma " + arma.name + " agregada a la lista de armas");
                 Armainicial.SetActive(false);
                 ArmaArcoiris.GetComponent<raycastLaser>().enabled = true;
                 ArmaArcoiris.GetComponent<raycastLaser>().ModoDisparo = true;
                 arma.transform.position = posicionArma.position; // coloca el arma en las coordenadas del objeto "PosicionArma"
+                arma.transform.rotation = posicionArma.rotation; // coloca el arma en las coordenadas del objeto "PosicionArma"
                 arma.transform.parent = posicionArma; // hace que el objeto "PosicionArma" sea el padre del objeto de arma
             }
         }

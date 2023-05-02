@@ -16,7 +16,7 @@ public class Idle_NPC3 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _enemy = GameObject.FindGameObjectWithTag("Enemies").transform;
+        _enemy = GameObject.FindGameObjectWithTag("EnemyWay").transform;
 
         _timer = 0;
     }
